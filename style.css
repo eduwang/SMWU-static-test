@@ -84,3 +84,53 @@ ul {
 .delete-btn:hover {
     color: #b71c1c;
 }
+
+/* 캘린더 스타일 */
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#calendar {
+    width: 100%;
+    max-width: 320px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-grid div {
+    padding: 10px;
+    background: #c8e6c9;
+    border-radius: 5px;
+}
+
+.calendar-grid .empty {
+    background: none;
+}

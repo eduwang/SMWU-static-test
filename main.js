@@ -72,3 +72,56 @@ document.addEventListener("DOMContentLoaded", () => {
     // 🟢 페이지 로드 시 저장된 할 일 불러오기
     loadTodos();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const calendarEl = document.getElementById("calendar");
+
+    const renderCalendar = (year, month) => {
+        calendarEl.innerHTML = ""; // 기존 달력 초기화
+
+        const currentDate = new Date(year, month, 1);
+        const monthName = currentDate.toLocaleString("ko-KR", { month: "long" });
+        const firstDay = currentDate.getDay(); // 0(일) ~ 6(토)
+        const lastDate = new Date(year, month + 1, 0).getDate(); // 해당 월의 마지막 날짜
+        
+        // 헤더 추가
+        const header = document.createElement("div");
+        header.classList.add("calendar-header");
+        header.innerHTML = `<span>${year}년 ${monthName}</span>`;
+        calendarEl.appendChild(header);
+
+        // 요일 추가
+        const daysContainer = document.createElement("div");
+        daysContainer.classList.add("calendar-days");
+        ["일", "월", "화", "수", "목", "금", "토"].forEach(day => {
+            const dayEl = document.createElement("div");
+            dayEl.textContent = day;
+            daysContainer.appendChild(dayEl);
+        });
+        calendarEl.appendChild(daysContainer);
+
+        // 날짜 추가
+        const gridContainer = document.createElement("div");
+        gridContainer.classList.add("calendar-grid");
+
+        // 빈칸 추가 (첫 요일 맞추기)
+        for (let i = 0; i < firstDay; i++) {
+            const emptyCell = document.createElement("div");
+            emptyCell.classList.add("empty");
+            gridContainer.appendChild(emptyCell);
+        }
+
+        // 날짜 채우기
+        for (let day = 1; day <= lastDate; day++) {
+            const dayCell = document.createElement("div");
+            dayCell.textContent = day;
+            gridContainer.appendChild(dayCell);
+        }
+
+        calendarEl.appendChild(gridContainer);
+    };
+
+    // 현재 날짜 기준으로 달력 생성
+    const today = new Date();
+    renderCalendar(today.getFullYear(), today.getMonth());
+});

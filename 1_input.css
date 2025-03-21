@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+    background: #f4f4f4;
+  }
+  
+  .input-block {
+    background: white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 50%;
+    text-align: center;
+  }
+  
+  .input-block label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .input-block input,
+  .input-block select,
+  .input-block textarea {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .inline-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* 줄 바꿈 허용 (옵션 수 많을 때) */
+    margin-bottom: 0.5rem;
+  }
+  
+  .inline-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    width: 10%; /* ✅ 고정 너비 설정해서 텍스트 줄바꿈 방지 */
+    white-space: nowrap; /* ✅ 텍스트 줄바꿈 방지 */
+  }
+  

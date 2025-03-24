@@ -3,6 +3,9 @@ document.getElementById("submitBtn").addEventListener("click", () => {
     const name = document.getElementById("textInput").value;
     const password = document.getElementById("passwordInput").value;
     const email = document.getElementById("emailInput").value;
+    if (!email.includes("@") || !email.includes(".")) {
+      alert("이메일 형식이 올바르지 않습니다.");
+    }
     const number = document.getElementById("numberInput").value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
   

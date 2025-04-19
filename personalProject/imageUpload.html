@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>이미지 업로드 & 피드백</title>
+  <link rel="stylesheet" href="imageUpload.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- 이미지 업로드 영역 -->
+    <div class="upload-section" id="drop-area">
+      <p>이미지를 여기에 드래그 앤 드롭 하세요</p>
+      <input type="file" id="fileElem" accept="image/*" hidden />
+      <button onclick="document.getElementById('fileElem').click()">파일 선택</button>
+      <div id="preview"></div>
+    </div>
+
+    <!-- 피드백 영역 -->
+    <div class="feedback-section">
+      <h2>피드백 받기</h2>
+      <button id="getFeedbackBtn">피드백 받기</button>
+      <div id="feedbackResult">
+        <!-- 향후 피드백 결과 표시 -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="imageUpload.js"></script>
+</body>
+</html>

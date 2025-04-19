@@ -137,3 +137,35 @@ ul {
 .calendar-grid .empty {
     background: none;
 }
+
+/* 드롭다운 */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px; /* 약간의 간격 */
+    background-color: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    color: #388e3c;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #e8f5e9;
+}
+
+/* 호버 시 드롭다운 표시 */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}

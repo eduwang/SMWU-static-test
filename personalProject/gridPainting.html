@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모눈종이 점과 선 그리기</title>
+  <link rel="stylesheet" href="gridPainting.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="grid-area">
+          <div class="header-bar">
+            <h3>점 찍기 영역</h3>
+            <button id="undoPointBtn" class="header-btn">⟲ 되돌리기</button>
+          </div>
+          <canvas id="pointCanvas" width="500" height="500"></canvas>
+          <div class="debug-box" id="pointDebug"></div>
+        </div>
+      
+        <div class="grid-area">
+          <div class="header-bar">
+            <h3>선분 그리기 영역</h3>
+            <button id="undoLineBtn" class="header-btn">⟲ 되돌리기</button>
+          </div>
+          <canvas id="lineCanvas" width="500" height="500"></canvas>
+          <div class="debug-box" id="lineDebug"></div>
+        </div>
+    </div>      
+    <script type="module" src="gridPainting.js"></script>
+</body>
+</html>

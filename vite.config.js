@@ -10,6 +10,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         inputPage: resolve(__dirname, '1_input.html'),
         alertPage: resolve(__dirname, '2_alert.html'),
+        imageUploadPage: resolve(__dirname,'personalProject/imageUpload.html'),
+        gridPaintingPage: resolve(__dirname,'personalProject/gridPainting.html'),
       },
     },
   },

@@ -12,6 +12,7 @@ export default defineConfig({
         alertPage: resolve(__dirname, '2_alert.html'),
         imageUploadPage: resolve(__dirname,'personalProject/imageUpload.html'),
         gridPaintingPage: resolve(__dirname,'personalProject/gridPainting.html'),
+        modelViewerPage: resolve(__dirname,'personalProject/3dModelViewer.html'),
       },
     },
   },

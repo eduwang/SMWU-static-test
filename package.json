@@ -12,6 +12,8 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "sweetalert2": "^11.17.2"
+    "gsap": "^3.12.7",
+    "sweetalert2": "^11.17.2",
+    "three": "^0.175.0"
   }
 }

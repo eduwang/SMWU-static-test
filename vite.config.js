@@ -13,6 +13,8 @@ export default defineConfig({
         imageUploadPage: resolve(__dirname,'personalProject/imageUpload.html'),
         gridPaintingPage: resolve(__dirname,'personalProject/gridPainting.html'),
         modelViewerPage: resolve(__dirname,'personalProject/3dModelViewer.html'),
+        basicChatbotPage: resolve(__dirname,'chatbotPrototype/basicChatbot.html'),
+        chatbotWithRAGPage: resolve(__dirname,'chatbotPrototype/chatbotRAG.html'),
       },
     },
   },

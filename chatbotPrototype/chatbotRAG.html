@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chatbot 방식 비교</title>
+  <link rel="stylesheet" href="chatbotRAG.css" />
+</head>
+<body>
+  <div class="rag-wrapper">
+    <!-- 좌측: 사용자 입력 -->
+    <div class="rag-input">
+      <h3>사용자 입력</h3>
+      <textarea id="userInput" placeholder="여기에 사용자 입력 내용을 적으세요..."></textarea>
+      <!-- <button id="sendBtn">전송</button> -->
+    </div>
+
+    <!-- 우측: API 비교 -->
+    <div class="rag-output">
+      <!-- 기존 ChatGPT 방식 -->
+<!-- 기존 ChatGPT 방식 -->
+    <div class="rag-section">
+        <h4>🔵 ChatGPT API 방식</h4>
+        <textarea id="prompt1" placeholder="ChatGPT Prompt 입력"></textarea>
+        <button id="sendGPTBtn">▶️ ChatGPT 전송</button>
+        <div id="output1" class="output-box">[응답 대기 중]</div>
+    </div>
+    
+    <!-- Assistant 방식 -->
+    <div class="rag-section">
+        <h4>🟢 Assistants API 방식</h4>
+        <textarea id="prompt2" placeholder="Assistant Prompt 입력"></textarea>
+        <button id="sendAssistantBtn">▶️ Assistant 전송</button>
+        <div id="output2" class="output-box">[응답 대기 중]</div>
+    </div>
+  
+    </div>
+  </div>
+
+  <script type="module" src="chatbotRAG.js"></script>
+</body>
+</html>

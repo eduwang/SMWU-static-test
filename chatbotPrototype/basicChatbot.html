@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>기본 챗봇</title>
+  <link rel="stylesheet" href="basicChatbot.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- 좌측: 채팅창 -->
+    <div class="chat-container">
+      <div id="chatLog" class="chat-log"></div>
+      <input type="text" id="chatInput" placeholder="메시지를 입력하세요..." />
+    </div>
+
+    <!-- 우측: 개발자용 도구 -->
+    <div class="dev-panel">
+      <h3>개발자 도구</h3>
+
+      <label for="systemPrompt">System Prompt:</label>
+      <textarea id="systemPrompt" rows="6">당신은 친절한 챗봇입니다.</textarea>
+
+      <div class="model-select">
+        <p><strong>모델 선택:</strong></p>
+        <label><input type="radio" name="model" value="gpt-3.5-turbo" checked> gpt-3.5-turbo</label><br />
+        <label><input type="radio" name="model" value="gpt-4-turbo"> gpt-4-turbo</label>
+      </div>
+    </div>
+    
+    <script type="module" src="basicChatbot.js"></script>
+  </div>
+</body>
+
+</html>

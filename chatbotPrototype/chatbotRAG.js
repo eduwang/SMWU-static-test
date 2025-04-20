@@ -67,7 +67,7 @@ async function fetchGPT(userInput, systemPrompt) {
       };
   
       console.log("🟩 Assistant API 요청 메시지:");
-      console.log("instructions:", customPrompt || "당신은 친절한 조수입니다.");
+    //   console.log("instructions:", customPrompt || "당신은 친절한 조수입니다.");
       console.log("user message:", userInput);
   
       // 1️⃣ Thread 생성
@@ -178,4 +178,4 @@ TMSSR Framework의 내용을 바탕으로, 사용자와 가상의 학생 사이�
 중요:
 - 학생과 교사의 대화를 그대로 반복하거나 인용하지 말고, 핵심 내용을 요약하고 분석 중심으로 작성해줘
 - TMSSR Framework에 기반한 분석을 명확히 반영해줘`
-document.getElementById("prompt2").placeholder = "예: 반응형 문서를 분석하는 Assistant입니다.";
+document.getElementById("prompt2").placeholder = "prompt 불필요";
